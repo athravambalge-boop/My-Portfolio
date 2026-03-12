@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atharva Ambalge - AI & ML Engineer | Building intelligent systems with Python, TensorFlow, and modern web technologies.">
+    <meta property="og:title" content="Atharva Ambalge | AI & ML Engineer">
+    <meta property="og:description" content="Passionate about AI, ML, and solving real-world problems with data-driven solutions.">
+    <meta property="og:image" content="atharva.jpeg">
+    <title>Atharva Ambalge | AI & ML Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar"><div class="progress"></div></div>
+    
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Mobile nav toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
+    <nav>
+        <div class="logo">ATHARVA'S<span> PORTFOLIO</span></div>
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#stats">Stats</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="btn-sm"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+        </div>
+        <label for="nav-toggle" class="hamburger">
+            <span></span><span></span><span></span>
+        </label>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Building digital experiences that solve real-world problems.</h1>
+            <p id="typewriter-text" aria-live="polite"></p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="resume.pdf" class="btn-secondary" download><i class="fa-solid fa-file-pdf"></i> Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="atharva.jpeg" alt="Atharva Ambalge, AI & ML Engineer" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <p class="about-text">AI & Machine Learning Engineer passionate about building intelligent systems and scalable applications.</p>
+                    <p class="about-text">Bridging raw data to actionable insights through robust ML pipelines and intuitive software design.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cricket" class="fade-in">
+            <h2>Beyond Code</h2>
+            <div class="cricket-container">
+                <div class="cricket-content">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Age 7-13</div>
+                        <p>Rigorous practice led to <strong>U14 Invitation Matches</strong> against regional best talent.</p>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <div class="timeline-year">State Selection</div>
+                        <p>Selected in <strong>Top 20 Players Squad</strong> of <strong>Under-14 Maharashtra State Team</strong>.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Present</div>
+                        <p>Represent <strong>College Team</strong> in competitive <strong>Inter-Collegiate matches</strong>.</p>
+                    </div>
+                </div>
+                <div class="cricket-image">
+                    <div class="glass-frame">
+                        <img src="atharva1.jpeg" alt="Atharva cricket journey" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2>Technical Stack</h2>
+            <!-- BENTO GRID SKILLS (2026 TREND) -->
+            <div class="skills-bento">
+                <div class="skills-hero">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python<br>Expert</h3>
+                    <p>ML Pipelines, Data Science, APIs</p>
+                </div>
+                <div class="skill-item"><i class="fa-solid fa-brain"></i><span>ML</span></div>
+                <div class="skill-item"><i class="fa-solid fa-layer-group"></i><span>TensorFlow</span></div>
+                <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                <div class="skill-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                <div class="skill-item"><i class="fa-solid fa-code"></i><span>C++</span></div>
+                <div class="skill-item skills-span-2">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Data Viz & Analytics</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW STATS COUNTER SECTION -->
+        <section id="stats" class="fade-in stats-section">
+            <h2>My Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span id="projects-count">0</span>+
+                    <div>Projects</div>
+                </div>
+                <div class="stat-item">
+                    <span id="lines-count">0</span>k+
+                    <div>Lines of Code</div>
+                </div>
+                <div class="stat-item">
+                    <span id="hours-count">0</span>+
+                    <div>Coding Hours</div>
+                </div>
+                <div class="stat-item">
+                    <span id="accuracy-count">0</span>%
+                    <div>Model Accuracy</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <h2>Featured Projects</h2>
+            <div class="grid-container">
+                <a href="https://github.com/athravambalge-boop" target="_blank" rel="noopener" class="card" tabindex="0">
+                    <div class="card-tag">ML / Agriculture</div>
+                    <h3>Crop Recommendation</h3>
+                    <p>Optimal crop prediction using soil/weather data + Random Forest (95% accuracy).</p>
+                </a>
+                <a href="https://github.com/athravambalge-boop/FSDProject" target="_blank" rel="noopener" class="card" tabindex="0">
+                    <div class="card-tag">Full Stack</div>
+                    <h3>Akurdi Mess</h3>
+                    <p>Local food service platform with reviews, search, and real-time menus.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <form action="https://formspree.io/f/your_unique_id" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="user-name">Name</label>
+                        <input id="user-name" type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Email</label>
+                        <input id="user-email" type="email" name="_replyto" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-message">Message</label>
+                        <textarea id="user-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:athravambalge@gmail.com">athravambalge@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/atharva-ambalge-69ab14328/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/athravambalge-boop" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Atharva Ambalge. Perspective Matters.</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
