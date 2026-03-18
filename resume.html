@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Ambalge - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #38bdf8;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .header .title {
+            font-size: 16px;
+            color: #38bdf8;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        .contact-links a {
+            color: #38bdf8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #0284c7;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            color: #1e293b;
+            text-transform: uppercase;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Experience/Projects */
+        .job, .project, .education {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .job:last-child, .project:last-child, .education:last-child {
+            border-bottom: none;
+        }
+
+        .job-header, .project-header, .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title, .project-title, .education-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .job-company, .project-type {
+            font-size: 14px;
+            color: #38bdf8;
+            font-weight: 500;
+        }
+
+        .job-date, .education-date {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .job-description, .project-description, .education-details {
+            font-size: 14px;
+            color: #475569;
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #38bdf8;
+        }
+
+        .skill-category h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #38bdf8;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .skill-items {
+            font-size: 13px;
+            color: #475569;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        .print-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .print-btn:hover {
+            background: #0284c7;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .contact-links {
+                gap: 10px;
+                font-size: 12px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .job-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()"><i class="fa-solid fa-download"></i> Download PDF</button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>ATHARVA AMBALGE</h1>
+            <p class="title">AI & Machine Learning Engineer</p>
+            <div class="contact-links">
+                <a href="mailto:athravambalge@gmail.com"><i class="fa-solid fa-envelope"></i> athravambalge@gmail.com</a>
+                <a href="https://www.linkedin.com/in/atharva-ambalge-69ab14328/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/athravambalge-boop" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://athravambalge.com" target="_blank"><i class="fa-solid fa-globe"></i> Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p style="font-size: 14px; color: #475569; line-height: 1.7;">
+                AI & Machine Learning Engineer passionate about building intelligent systems and scalable applications. 
+                Experienced in developing ML pipelines, data science solutions, and full-stack applications. 
+                Proficient in Python, TensorFlow, and modern web technologies with a proven track record of delivering 
+                high-accuracy models and user-centric solutions.
+            </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">Python, JavaScript, C++, SQL</div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML & AI</h3>
+                    <div class="skill-items">TensorFlow, Machine Learning, NLP, Data Science</div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-items">HTML5, CSS3, JavaScript, Full-Stack Development</div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Databases</h3>
+                    <div class="skill-items">Git, SQL, Data Visualization, Jupyter</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section">
+            <h2>Featured Projects</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-title">Spam Email Classifier Using ML</span>
+                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
+                </div>
+                <p class="project-type">Machine Learning | NLP | Email Classification</p>
+                <p class="project-description">
+                    Developed an intelligent email classification system using machine learning algorithms to detect and filter spam emails. 
+                    Implemented feature extraction, model training, and evaluation with high accuracy rates.
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-title">Movie Recommendation System</span>
+                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
+                </div>
+                <p class="project-type">Machine Learning | Collaborative Filtering | Recommendations</p>
+                <p class="project-description">
+                    Built a personalized movie recommendation engine using collaborative filtering and content-based filtering techniques. 
+                    Analyzed user preferences and behavior patterns to provide accurate recommendations.
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-title">Crop Recommendation System</span>
+                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
+                </div>
+                <p class="project-type">Machine Learning | Agriculture | Data Science</p>
+                <p class="project-description">
+                    Developed ML model for optimal crop prediction using soil and weather data. Achieved 95% accuracy using Random Forest algorithm. 
+                    Helps farmers make data-driven decisions for crop selection.
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-title">Akurdi Mess - Local Food Service Platform</span>
+                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
+                </div>
+                <p class="project-type">Full Stack | Web Development | Real-time Services</p>
+                <p class="project-description">
+                    Developed a full-stack platform for local food services featuring user reviews, powerful search functionality, 
+                    and real-time menu updates. Implemented responsive UI and robust backend architecture.
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-title">Personal Portfolio Website</span>
+                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
+                </div>
+                <p class="project-type">Web Development | Interactive UI | Showcase</p>
+                <p class="project-description">
+                    Created an interactive personal portfolio website showcasing projects, skills, and professional experience. 
+                    Features smooth animations, responsive design, and integrated contact form.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+
+            <div class="education">
+                <div class="education-header">
+                    <span class="education-title">Bachelor of Engineering/Technology</span>
+                    <span class="education-date">In Progress</span>
+                </div>
+                <p class="education-details" style="font-weight: 500;">
+                    Specialization: Computer Science / AI & ML
+                </p>
+            </div>
+        </section>
+
+        <!-- Beyond Code -->
+        <section class="section">
+            <h2>Beyond Code</h2>
+            <p style="font-size: 14px; color: #475569; margin-bottom: 10px;">
+                <strong>Cricket – Competitive Athlete:</strong> Selected in Maharashtra State Team's Top 20 Players Squad (Under-14). 
+                Participated in State invitation matches and continue to represent college team in inter-collegiate tournaments. 
+                Rigorous training and tournament experience developed discipline and teamwork skills that translate to professional environments.
+            </p>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="section">
+            <h2>Additional Information</h2>
+            <ul style="margin-left: 0; list-style: none;">
+                <li><strong>Problem-Solving:</strong> Excellent analytical and problem-solving skills with focus on innovative solutions</li>
+                <li><strong>Collaboration:</strong> Team player with strong communication and collaborative abilities</li>
+                <li><strong>Continuous Learning:</strong> Committed to staying updated with latest ML/AI advancements and technologies</li>
+                <li><strong>Portfolio:</strong> Active on GitHub with multiple public repositories and ongoing projects</li>
+            </ul>
+        </section>
+    </div>
+
+    <button class="print-btn" onclick="window.print()" style="margin-top: 30px;"><i class="fa-solid fa-download"></i> Download PDF</button>
+</body>
+</html>
