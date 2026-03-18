@@ -14,9 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: #f7fafc;
+            background: #f5f5f5;
             padding: 20px;
         }
 
@@ -24,146 +22,212 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            overflow: hidden;
         }
 
-        /* Header */
         .header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #38bdf8;
-            padding-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 32px;
-            color: #1e293b;
-            margin-bottom: 5px;
-        }
-
-        .header .title {
-            font-size: 16px;
-            color: #38bdf8;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .contact-links {
+            background: linear-gradient(135deg, #1a365d 0%, #2d5a8c 100%);
+            color: white;
+            padding: 40px;
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 14px;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
         }
 
-        .contact-links a {
-            color: #38bdf8;
+        .header-content h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .header-content .title {
+            font-size: 16px;
+            color: #ffa500;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .header-contact a {
+            color: white;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             transition: color 0.3s;
         }
 
-        .contact-links a:hover {
-            color: #0284c7;
+        .header-contact a:hover {
+            color: #ffa500;
         }
 
+        .profile-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #ffa500;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .left-column {}
+
+        .right-column {}
+
         /* Sections */
+        .section h2 {
+            font-size: 14px;
+            color: #1a365d;
+            text-transform: uppercase;
+            border-bottom: 2px solid #1a365d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section-right h2 {
+            font-size: 14px;
+            color: #1a365d;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ffa500;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
         .section {
             margin-bottom: 30px;
         }
 
-        .section h2 {
-            font-size: 18px;
-            color: #1e293b;
-            text-transform: uppercase;
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+        .section-right {
+            margin-bottom: 30px;
         }
 
-        /* Experience/Projects */
-        .job, .project, .education {
-            margin-bottom: 18px;
-            padding-bottom: 18px;
-            border-bottom: 1px solid #e2e8f0;
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
         }
 
-        .job:last-child, .project:last-child, .education:last-child {
-            border-bottom: none;
+        .education-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 3px;
         }
 
-        .job-header, .project-header, .education-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+        .education-item .subtitle {
+            font-size: 13px;
+            color: #ffa500;
+            font-weight: 500;
             margin-bottom: 5px;
         }
 
-        .job-title, .project-title, .education-title {
-            font-size: 16px;
+        .education-item .details {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-item h3 {
+            font-size: 14px;
             font-weight: 600;
-            color: #1e293b;
+            color: #1a365d;
+            margin-bottom: 3px;
         }
 
-        .job-company, .project-type {
-            font-size: 14px;
-            color: #38bdf8;
+        .project-item .tag {
+            font-size: 11px;
+            color: #ffa500;
             font-weight: 500;
+            margin-bottom: 5px;
         }
 
-        .job-date, .education-date {
-            font-size: 13px;
-            color: #64748b;
-        }
-
-        .job-description, .project-description, .education-details {
-            font-size: 14px;
-            color: #475569;
-            margin-top: 8px;
-            line-height: 1.6;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-
-        li {
-            margin-bottom: 6px;
-            color: #475569;
-            font-size: 14px;
+        .project-item .description {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
         }
 
         /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .skill-category {
-            background: #f1f5f9;
-            padding: 12px;
-            border-radius: 6px;
-            border-left: 4px solid #38bdf8;
+        .skill-badge {
+            background: #1a365d;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
         }
 
-        .skill-category h3 {
+        /* Summary */
+        .summary-text {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Achievements */
+        .achievement-item {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .achievement-item:last-child {
+            border-bottom: none;
+        }
+
+        .achievement-item .icon {
+            font-size: 20px;
+            color: #ffa500;
+            margin-bottom: 5px;
+        }
+
+        .achievement-item h3 {
             font-size: 13px;
             font-weight: 600;
-            color: #38bdf8;
-            margin-bottom: 6px;
-            text-transform: uppercase;
+            color: #1a365d;
+            margin-bottom: 3px;
         }
 
-        .skill-items {
-            font-size: 13px;
-            color: #475569;
+        .achievement-item .description {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.5;
         }
 
         /* Print Styles */
@@ -174,10 +238,9 @@
             }
 
             .container {
-                max-width: 100%;
-                padding: 0;
                 box-shadow: none;
                 border-radius: 0;
+                max-width: 100%;
             }
 
             .print-btn {
@@ -194,7 +257,7 @@
             width: 150px;
             margin: 20px auto;
             padding: 10px 20px;
-            background: #38bdf8;
+            background: #1a365d;
             color: white;
             border: none;
             border-radius: 6px;
@@ -205,34 +268,34 @@
         }
 
         .print-btn:hover {
-            background: #0284c7;
+            background: #0f2847;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .header h1 {
-                font-size: 24px;
-            }
-
-            .contact-links {
-                gap: 10px;
-                font-size: 12px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .job-header {
+            .header {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
+                padding: 30px;
             }
 
-            .job-date {
-                margin-top: 5px;
+            .header-contact {
+                align-items: center;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+                gap: 20px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .header-content h1 {
+                font-size: 28px;
             }
         }
     </style>
@@ -243,165 +306,148 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>ATHARVA AMBALGE</h1>
-            <p class="title">AI & Machine Learning Engineer</p>
-            <div class="contact-links">
-                <a href="mailto:athravambalge@gmail.com"><i class="fa-solid fa-envelope"></i> athravambalge@gmail.com</a>
-                <a href="https://www.linkedin.com/in/atharva-ambalge-69ab14328/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/athravambalge-boop" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://athravambalge.com" target="_blank"><i class="fa-solid fa-globe"></i> Portfolio</a>
+            <div class="header-content">
+                <h1>ATHARVA AMBALGE</h1>
+                <p class="title">AI & Machine Learning Engineer</p>
+                <div class="header-contact">
+                    <a href="tel:+917276084388"><i class="fa-solid fa-phone"></i> +91 7276084388</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=athravambalge@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> athravambalge@gmail.com</a>
+                    <a href="https://github.com/athravambalge-boop" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/atharva-ambalge-69ab14328/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
+            <img src="atharva.jpeg" alt="Atharva Ambalge" class="profile-image">
         </div>
 
-        <!-- Professional Summary -->
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <p style="font-size: 14px; color: #475569; line-height: 1.7;">
-                AI & Machine Learning Engineer passionate about building intelligent systems and scalable applications. 
-                Experienced in developing ML pipelines, data science solutions, and full-stack applications. 
-                Proficient in Python, TensorFlow, and modern web technologies with a proven track record of delivering 
-                high-accuracy models and user-centric solutions.
-            </p>
-        </section>
+        <!-- Main Content -->
+        <div class="content">
+            <!-- LEFT COLUMN -->
+            <div class="left-column">
+                <!-- Education -->
+                <section class="section">
+                    <h2>EDUCATION</h2>
+                    <div class="education-item">
+                        <h3>Bachelor of Technology</h3>
+                        <div class="subtitle">Computer Science / AI & ML</div>
+                        <div class="details">
+                            <strong>Pimpri Chinchwad College of Engineering</strong><br>
+                            Akurdi | In Progress
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <h3>High School</h3>
+                        <div class="details">
+                            <strong>Podar International School</strong><br>
+                            Chinchwad | Completed
+                        </div>
+                    </div>
+                </section>
 
-        <!-- Technical Skills -->
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-items">Python, JavaScript, C++, SQL</div>
-                </div>
-                <div class="skill-category">
-                    <h3>ML & AI</h3>
-                    <div class="skill-items">TensorFlow, Machine Learning, NLP, Data Science</div>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skill-items">HTML5, CSS3, JavaScript, Full-Stack Development</div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Databases</h3>
-                    <div class="skill-items">Git, SQL, Data Visualization, Jupyter</div>
-                </div>
-            </div>
-        </section>
+                <!-- Projects -->
+                <section class="section">
+                    <h2>FEATURED PROJECTS</h2>
 
-        <!-- Projects -->
-        <section class="section">
-            <h2>Featured Projects</h2>
+                    <div class="project-item">
+                        <h3>Spam Email Classifier Using ML</h3>
+                        <div class="tag">Machine Learning | NLP | Classification</div>
+                        <div class="description">
+                            Developed an intelligent email classification system using machine learning algorithms to detect and filter spam emails with high accuracy.
+                        </div>
+                    </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Spam Email Classifier Using ML</span>
-                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
-                </div>
-                <p class="project-type">Machine Learning | NLP | Email Classification</p>
-                <p class="project-description">
-                    Developed an intelligent email classification system using machine learning algorithms to detect and filter spam emails. 
-                    Implemented feature extraction, model training, and evaluation with high accuracy rates.
-                </p>
-            </div>
+                    <div class="project-item">
+                        <h3>Movie Recommendation System</h3>
+                        <div class="tag">ML | Collaborative Filtering</div>
+                        <div class="description">
+                            Built a personalized recommendation engine using collaborative filtering to provide accurate movie suggestions based on user preferences.
+                        </div>
+                    </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Movie Recommendation System</span>
-                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
-                </div>
-                <p class="project-type">Machine Learning | Collaborative Filtering | Recommendations</p>
-                <p class="project-description">
-                    Built a personalized movie recommendation engine using collaborative filtering and content-based filtering techniques. 
-                    Analyzed user preferences and behavior patterns to provide accurate recommendations.
-                </p>
-            </div>
+                    <div class="project-item">
+                        <h3>Crop Recommendation System</h3>
+                        <div class="tag">ML | Agriculture | Data Science</div>
+                        <div class="description">
+                            Developed ML model for optimal crop prediction using soil/weather data. Achieved 95% accuracy using Random Forest algorithm.
+                        </div>
+                    </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Crop Recommendation System</span>
-                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
-                </div>
-                <p class="project-type">Machine Learning | Agriculture | Data Science</p>
-                <p class="project-description">
-                    Developed ML model for optimal crop prediction using soil and weather data. Achieved 95% accuracy using Random Forest algorithm. 
-                    Helps farmers make data-driven decisions for crop selection.
-                </p>
-            </div>
+                    <div class="project-item">
+                        <h3>Akurdi Mess - Food Service Platform</h3>
+                        <div class="tag">Full Stack | Web Development</div>
+                        <div class="description">
+                            Developed full-stack platform for local food services featuring user reviews, search functionality, and real-time menu updates.
+                        </div>
+                    </div>
+                </section>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Akurdi Mess - Local Food Service Platform</span>
-                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
-                </div>
-                <p class="project-type">Full Stack | Web Development | Real-time Services</p>
-                <p class="project-description">
-                    Developed a full-stack platform for local food services featuring user reviews, powerful search functionality, 
-                    and real-time menu updates. Implemented responsive UI and robust backend architecture.
-                </p>
+                <!-- Skills -->
+                <section class="section">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <div class="skills-content">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Machine Learning</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">NLP</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">Data Science</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Data Visualization</span>
+                    </div>
+                </section>
             </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-title">Personal Portfolio Website</span>
-                    <span class="education-date"><i class="fa-brands fa-github"></i> View on GitHub</span>
-                </div>
-                <p class="project-type">Web Development | Interactive UI | Showcase</p>
-                <p class="project-description">
-                    Created an interactive personal portfolio website showcasing projects, skills, and professional experience. 
-                    Features smooth animations, responsive design, and integrated contact form.
-                </p>
+            <!-- RIGHT COLUMN -->
+            <div class="right-column">
+                <!-- Summary -->
+                <section class="section-right">
+                    <h2>SUMMARY</h2>
+                    <p class="summary-text">
+                        AI & Machine Learning Engineer passionate about building intelligent systems and scalable applications. Experienced in developing ML pipelines, data science solutions, and full-stack applications. Proficient in Python, TensorFlow, and modern web technologies with proven track record of delivering high-accuracy models.
+                    </p>
+                </section>
+
+                <!-- Most Proud Of -->
+                <section class="section-right">
+                    <h2>MOST PROUD OF</h2>
+
+                    <div class="achievement-item">
+                        <div class="icon">🏆</div>
+                        <h3>95% Model Accuracy</h3>
+                        <div class="description">
+                            Crop Recommendation System achieved 95% accuracy using Random Forest, helping farmers make data-driven decisions.
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon">🎯</div>
+                        <h3>5 Production Projects</h3>
+                        <div class="description">
+                            Successfully developed and deployed multiple ML and full-stack applications from concept to production.
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon">🏅</div>
+                        <h3>State Cricket Squad</h3>
+                        <div class="description">
+                            Selected in Maharashtra State Team's Top 20 Players Squad (Under-14). Demonstrates discipline and competitive excellence.
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon">💻</div>
+                        <h3>Active Open Source</h3>
+                        <div class="description">
+                            Multiple public repositories on GitHub showcasing diverse projects in ML, web development, and data science.
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-
-        <!-- Education -->
-        <section class="section">
-            <h2>Education</h2>
-
-            <div class="education">
-                <div class="education-header">
-                    <span class="education-title">Bachelor of Technology</span>
-                    <span class="education-date">In Progress</span>
-                </div>
-                <p class="education-details" style="font-weight: 500;">
-                    Pimpri Chinchwad College of Engineering, Akurdi
-                </p>
-                <p class="education-details">
-                    Specialization: Computer Science / AI & ML
-                </p>
-            </div>
-
-            <div class="education">
-                <div class="education-header">
-                    <span class="education-title">High School</span>
-                    <span class="education-date">Completed</span>
-                </div>
-                <p class="education-details" style="font-weight: 500;">
-                    Podar International School, Chinchwad
-                </p>
-            </div>
-        </section>
-
-        <!-- Beyond Code -->
-        <section class="section">
-            <h2>Beyond Code</h2>
-            <p style="font-size: 14px; color: #475569; margin-bottom: 10px;">
-                <strong>Cricket – Competitive Athlete:</strong> Selected in Maharashtra State Team's Top 20 Players Squad (Under-14). 
-                Participated in State invitation matches and continue to represent college team in inter-collegiate tournaments. 
-                Rigorous training and tournament experience developed discipline and teamwork skills that translate to professional environments.
-            </p>
-        </section>
-
-        <!-- Additional Information -->
-        <section class="section">
-            <h2>Additional Information</h2>
-            <ul style="margin-left: 0; list-style: none;">
-                <li><strong>Problem-Solving:</strong> Excellent analytical and problem-solving skills with focus on innovative solutions</li>
-                <li><strong>Collaboration:</strong> Team player with strong communication and collaborative abilities</li>
-                <li><strong>Continuous Learning:</strong> Committed to staying updated with latest ML/AI advancements and technologies</li>
-                <li><strong>Portfolio:</strong> Active on GitHub with multiple public repositories and ongoing projects</li>
-            </ul>
-        </section>
+        </div>
     </div>
 
-    <button class="print-btn" onclick="window.print()" style="margin-top: 30px;"><i class="fa-solid fa-download"></i> Download PDF</button>
+    <button class="print-btn" onclick="window.print()" style="margin-top: 20px;"><i class="fa-solid fa-download"></i> Download PDF</button>
 </body>
 </html>
