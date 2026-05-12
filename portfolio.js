@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function animateCounters() {
         const counters = {
-            'projects-count': 8,
-            'lines-count': 5000,
-            'hours-count': 50,
+            'projects-count': 9,
+            'lines-count': 10000,
+            'hours-count': 100,
             'accuracy-count': 95
         };
         Object.keys(counters).forEach(id => {
